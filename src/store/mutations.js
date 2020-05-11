@@ -34,5 +34,13 @@ export default {
   },
   addDevice (state, device) {
     state.Devices.push(device)
+  },
+  editDevice (state, obj) {
+    state.Devices.forEach(element => {
+      if (element.ID === obj.ID) {
+        element.Name = obj.Name
+        element.Location = obj.Location
+      }
+    })
   }
 }

@@ -1,13 +1,13 @@
 <template>
   <v-col cols="12" sm="12" lg="3" md="6">
     <v-card class="mx-auto elevation-3" color="#FFFFFF" dense>
-      <v-card-title>
+      <v-card-title dense>
         <v-icon medium left>mdi-chip</v-icon>
         <span class="body-1 text-uppercase" color="#212121">
           {{Name}}
           <br />
-        </span>
-        <v-icon class="btn ml-12 red--text darken-2" dense small>edit</v-icon>
+        </span> <v-spacer> </v-spacer>
+        <EditDevice :Name="Name" :ID="Serial" :Location="Location" :Type="Type"/>
       </v-card-title>
       <v-card-text>
         <span class="text-uppercase">
@@ -23,7 +23,9 @@
   </v-col>
 </template>
 <script>
+import EditDevice from './EditDevice'
 export default {
+  components: { EditDevice },
   props: ['Name', 'Type', 'Serial', 'Location']
 }
 </script>
