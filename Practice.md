@@ -40,3 +40,25 @@ Object : {
         }
     }
 ```
+## Alerts
+```javascript
+Alert:[AlertObject0, AlertObject1, AlertObject2]
+AlertObject:{
+    ID: String,
+    Time: Date,
+    Acknowledged: Boolean,
+    Sent: Boolean,
+    Recipients:[{
+        Name: String,
+        Email: String,
+        Phone: Number
+    }],
+    AlertType: String, // Above Max, Below Min, Optimal Level
+    Active: Boolean,
+    Source: {
+        DeviceName: String,
+        DEVICEID: String
+    },
+    Msg:String
+}
+```

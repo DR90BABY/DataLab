@@ -13,5 +13,8 @@ export default {
   },
   getActiveDevices (state) {
     return state.Devices.filter(Device => Device.Active === true)
+  },
+  getAlerts (state) {
+    return state.Alerts
   }
 }

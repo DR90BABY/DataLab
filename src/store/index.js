@@ -78,7 +78,35 @@ export default new Vuex.Store({
         ]
       }
     ],
-    DateRange: []
+    DateRange: [],
+    Alerts: [{
+      name: 'DEVICE A',
+      time: 'May 12 2020 05:42',
+      Status: 'ACTIVE',
+      Acknowledged: true,
+      AlertType: 'SomeAlert'
+    },
+    {
+      name: 'DEVICE B',
+      time: 'May 13 2020 05:42',
+      Status: 'SOLVED',
+      Acknowledged: false,
+      AlertType: 'SomeAlert'
+    },
+    {
+      name: 'DEVICE C',
+      time: 'May 14 2020 05:42',
+      Status: 'ACTIVE',
+      Acknowledged: true,
+      AlertType: 'SomeAlert'
+    },
+    {
+      name: 'DEVICE D',
+      time: 'May 15 2020 05:42',
+      Status: 'SOLVED',
+      Acknowledged: false,
+      AlertType: 'SomeAlert'
+    }]
   },
   getters,
   mutations,
