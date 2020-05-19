@@ -1,19 +1,19 @@
 <template>
   <v-app>
-    <Alerts/>
+    <router-view></router-view>
   </v-app>
 </template>
 <script>
 // import Dashboard from './views/Dashboard.vue'
 // import Device from './views/Devices'
 import store from './store/index'
-import Alerts from './views/Alerts'
+// import Alerts from './views/Alerts'
 export default {
   store,
   components: {
     // Dashboard,
     // Device,
-    Alerts
+    // Alerts
   }
 }
 </script>

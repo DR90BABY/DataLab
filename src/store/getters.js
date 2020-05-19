@@ -1,6 +1,10 @@
 export default {
   getDevices (state) {
-    return state.Devices
+    let deviceArr = []
+    state.Devices.forEach(element => {
+      deviceArr.push(element.Name)
+    })
+    return deviceArr
   },
   getData (state) {
     return state.Data
@@ -13,6 +17,9 @@ export default {
   },
   getActiveDevices (state) {
     return state.Devices.filter(Device => Device.Active === true)
+  },
+  getNav (state) {
+    return state.NavItems
   },
   getAlerts (state) {
     return state.Alerts

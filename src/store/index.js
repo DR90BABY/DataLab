@@ -9,6 +9,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    NavItems: [
+      { text: 'Dashboard', icon: 'dashboard', path: '/dashboard' },
+      { text: 'Devices', icon: 'developer_board', path: '/devices' },
+      { text: 'Alert', icon: 'report', path: '/alerts' },
+      { text: 'Account', icon: 'account_circle', path: '/' },
+      { text: 'Sign Out', icon: 'lock', path: '/' }
+    ],
     Devices: [{
       Name: 'Device A',
       ID: 'rtyury940',

@@ -21,7 +21,8 @@
               <v-icon v-text="NavItem.icon"></v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title v-text="NavItem.text"></v-list-item-title>
+              <v-list-item-title to="NavItem.path" v-text="NavItem.text">
+              </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
@@ -31,7 +32,7 @@
     <v-app-bar app color="#1976d2" dense dark>
       <v-app-bar-nav-icon
         color="white"
-        @click.stop="NavDrawState = !NavDrawState"/>
+        @click="NavDrawState = !NavDrawState"/>
       <v-toolbar-title v-show="!NavDrawState">Bit Stream</v-toolbar-title>
     </v-app-bar>
   </div>
@@ -39,15 +40,13 @@
 
 <script>
 export default {
+  computed: {
+    NavItems () {
+      return this.$store.getters.getNav
+    }
+  },
   data () {
     return {
-      NavItems: [
-        { text: 'Dashboard', icon: 'dashboard' },
-        { text: 'Devices', icon: 'developer_board' },
-        { text: 'Alert', icon: 'report' },
-        { text: 'Account', icon: 'account_circle' },
-        { text: 'Sign Out', icon: 'lock' }
-      ],
       NavDrawState: null
     }
   }
